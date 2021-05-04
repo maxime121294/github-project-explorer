@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "Github Project Explorer",
+  "description": "Open an online VS Code instance into your browser to quickly explore a github project without cloning or downloading it.",
+  "author": "Maxime Rebibo",
+  "homepage_url": "https://github.com/maxime121294/github-project-explorer",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "src/index.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "src/img/icon16.png",
+      "32": "src/img/icon32.png",
+      "48": "src/img/icon48.png",
+      "128": "src/img/icon128.png"
+    },
+    "default_popup": "popin.html"
+  },
+  "icons": {
+    "128": "src/img/icon128.png",
+    "96": "src/img/icon96.png",
+    "72": "src/img/icon72.png",
+    "64": "src/img/icon64.png",
+    "48": "src/img/icon48.png",
+    "32": "src/img/icon32.png",
+    "24": "src/img/icon24.png",
+    "16": "src/img/icon16.png"
+  }
+}

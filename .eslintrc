@@ -1,0 +1,44 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest/globals": true
+  },
+  "plugins": ["jest"],
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base/legacy",
+    "plugin:jest/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "fetch": "readonly",
+    "chrome": "readonly",
+    "window": "readonly",
+    "MutationObserver": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "semi": [
+      2,
+      "always"
+    ],
+    "no-plusplus": "off",
+    "func-name": "off",
+    "max-len": [
+      "warn",
+      {
+        "code": 140
+      }
+    ],
+    "no-console": [
+      "off"
+    ],
+    "func-names": "off",
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }]
+  }
+}
